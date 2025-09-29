@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>REKAYASA PRANGKAT LUNAK</title>
+  <style>
+    /* ===== Global ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      line-height: 1.6;
+      background-color: #e6f0fa; /* biru muda nyaman */
+      color: #0d1b2a;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    input, textarea, button {
+      font-family: inherit;
+      font-size: 1rem;
+    }
+
+    /* ===== Header ===== */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+      background-color: #3a7ca5; /* biru tengah */
+      color: white;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .logo-title {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .logo-title h1 {
+      font-size: 1.8rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav ul li a {
+      font-weight: 500;
+      padding: 8px 12px;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+
+    nav ul li a:hover {
+      background-color: rgba(255,255,255,0.2);
+    }
+
+    /* ===== Article ===== */
+    article {
+      padding: 60px 50px;
+      background-color: #d9e8fb; /* biru lembut */
+      text-align: center;
+    }
+
+    article h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #0d1b2a;
+    }
+
+    article p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      color: #1b263b;
+    }
+
+    /* ===== Section ===== */
+    section {
+      padding: 60px 50px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 30px;
+    }
+
+    section .card {
+      background-color: white;
+      border-radius: 10px;
+      padding: 20px;
+      flex: 1 1 300px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    section .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    section .card h3 {
+      margin-bottom: 15px;
+      color: #0d1b2a;
+    }
+
+    section .card p {
+      color: #1b263b;
+      font-size: 1rem;
+    }
+
+    /* ===== Form Komentar ===== */
+    .form-komentar {
+      padding: 60px 50px;
+      background-color: #f0f8ff;
+      max-width: 700px;
+      margin: 0 auto 50px auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .form-komentar h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #0d1b2a;
+    }
+
+    .form-komentar form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .form-komentar input,
+    .form-komentar textarea {
+      padding: 12px 15px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      outline: none;
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+
+    .form-komentar input:focus,
+    .form-komentar textarea:focus {
+      border-color: #3a7ca5;
+      box-shadow: 0 0 5px rgba(58,124,165,0.5);
+    }
+
+    .form-komentar textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .form-komentar button {
+      padding: 12px;
+      background-color: #3a7ca5;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .form-komentar button:hover {
+      background-color: #2e6287;
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      background-color: #3a7ca5;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+
+    footer p {
+      font-size: 0.95rem;
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== Header ===== -->
+  <header>
+    <div class="logo-title">
+      <img src="ChatGPT_Image_25_Sep_2025__17.48.29-removebg-preview.png" alt="Logo Jurusan RPL" width="60">
+      <h1>REKAYASA PRANGKAT LUNAK</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.php">Beranda</a></li>
+        <li><a href="profil.php">Profil</a></li>
+        <li><a href="galeri.php">Galeri</a></li>
+        <li><a href="kontak.php">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== Article ===== -->
+  <article>
+    <h2>Selamat Datang di Jurusan RPL</h2>
+    <p>Jurusan Rekayasa Perangkat Lunak (RPL) SMK Bhakti Nusantara menyediakan pendidikan berkualitas di bidang teknologi informasi dan pengembangan perangkat lunak. Kami berkomitmen mencetak lulusan profesional yang siap menghadapi tantangan industri digital.</p>
+  </article>
+
+  <!-- ===== Section ===== -->
+  <section>
+    <div class="card">
+      <h3>Visi</h3>
+      <p>Menjadi jurusan unggulan di bidang Rekayasa Perangkat Lunak yang menghasilkan lulusan profesional dan berkarakter.</p>
+    </div>
+    <div class="card">
+      <h3>Misi</h3>
+      <p>Menyelenggarakan pendidikan yang inovatif, mendukung pengembangan keterampilan teknologi, serta membangun karakter siswa.</p>
+    </div>
+    <div class="card">
+      <h3>Program</h3>
+      <p>Mempelajari pengembangan perangkat lunak, desain sistem, pemrograman, database, dan teknologi web modern.</p>
+    </div>
+  </section>
+
+  <!-- ===== Form Komentar ===== -->
+  <div class="form-komentar">
+    <h2>Kirim Komentar Anda</h2>
+    <form action="proseskomentar.php" method="post">
+      <input type="text" name="nama" placeholder="Nama Anda" required>
+      <input type="email" name="email" placeholder="Email Anda" required>
+      <textarea name="komentar" placeholder="Tulis komentar Anda..." required></textarea>
+      <button type="submit">Kirim Komentar</button><a href="tampil.php">Lihat Komentar</a>
+    </form>
+  </div>
+
+    <footer>
+  <h4>Total Pengunjung</h4>
+  <?php
+  include 'koneksi.php';
+  
+  $ip = $_SERVER['REMOTE_ADDR']; // ambil IP pengunjung
+  $tanggal = date("Y-m-d");
+
+  // cek apakah sudah ada record untuk pengunjung ini hari ini
+  $cek_visitor = mysqli_query($koneksi, "SELECT * FROM pengunjung WHERE alamat='$ip' AND tanggal='$tanggal'");
+  if (mysqli_num_rows($cek_visitor) == 0) {
+      mysqli_query($koneksi, "INSERT INTO pengunjung (alamat, tanggal) VALUES('$ip', '$tanggal')");
+  }
+
+  // total semua pengunjung
+  $sql = "SELECT COUNT(*) AS total FROM pengunjung";
+  $result = mysqli_query($koneksi, $sql);
+  $row = mysqli_fetch_assoc($result);
+
+  // total pengunjung hari ini
+  $sql_hari_ini = "SELECT COUNT(*) AS total_hari_ini FROM pengunjung WHERE tanggal = '$tanggal'";
+  $result_hari_ini = mysqli_query($koneksi, $sql_hari_ini);
+  $row_hari_ini = mysqli_fetch_assoc($result_hari_ini);
+
+  echo "Hari ini: " . $row_hari_ini['total_hari_ini'];
+  echo "<br>Jumlah pengunjung: " . $row['total'];
+  ?>
+  <p>&copy; 2025 SMK Bhakti Nusantara - Jurusan Rekayasa Perangkat Lunak</p>
+</footer>
+
+</body>
+</html>
